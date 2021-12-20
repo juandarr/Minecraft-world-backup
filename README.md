@@ -26,3 +26,14 @@ The modules `shutils`, `subprocess` and `datetime` are part of the standard Pyth
 ## Cron job
 
 After completing the Python and Bash scripts, the final step is the definition of a new cron job. This is implemented via `crontab -e` and adding a new line according to the instructions from this [Crontab](https://www.computerhope.com/unix/ucrontab.htm)'s page. 
+
+## Running scripts without password
+There are a couple of functional scripts (`stop` and `reboot`) used in step 1 and 3 of the automation workflow. The second one needs to be run as `sudo`. One way to do this is to modify `/etc/sudoers` to allow superuser access for my user without password. To achieve this follow the next steps:
+- Open the `/etc/sudoers` with `sudo visudo`
+- Add the following line to the file `user_name ALL=(ALL) NOPASSWD:/home/overcode/minecraft/boot`
+- To allow passwordless superuser execution to multiple files, use a comma to separate the paths
+- Save and you are all set
+
+## License
+
+Free and open source.
