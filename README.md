@@ -28,7 +28,7 @@ The modules `shutil`, `subprocess` and `datetime` are part of the standard Pytho
 After completing the Python and Bash scripts, the final step is the definition of a new cron job. This is implemented via `crontab -e` and adding a new line according to the instructions from this [Crontab](https://www.computerhope.com/unix/ucrontab.htm)'s page. 
 
 The image below illustrates the basic operation of `crontab`:
-![Crontab fundamentals](/resources/crontabi_basics.png)
+![Crontab fundamentals](/resources/crontab_basics.png)
 
 ## Running scripts without password
 There are a couple of functional scripts (`stop` and `reboot`) used in step 1 and 3 of the automation workflow. The second one needs to be run as `sudo`. One way to do this is to modify `/etc/sudoers` to allow superuser access for my user without password. To achieve this follow the next steps:
