@@ -9,7 +9,7 @@ The main script `minecraft_backup.py` implements three different steps aimed to 
 - Step 1: stops the server. This script will store the users and chunks for the overworld, nether and the end. This will safely store the current data of the world and will avoid file corruption since the server is stopped. 
 
 - Step 2: creates a backup of the world, nether and the end. To do this the script uses the modules `shutils`, `subprocess` and `datetime`. 
-	- `shutils`: used to create a whole copy of a tree directory and move it to a specific location. 
+	- `shutil`: used to create a whole copy of a tree directory and move it to a specific location. 
 	- `subprocess`: allows to execute arbitrary commands in Bash
 	- `datetime`: gives us the current date and time.
 
@@ -17,11 +17,11 @@ The main script `minecraft_backup.py` implements three different steps aimed to 
 
 ### Bash script
 
-The job of this script is to run the Python script. I was careful of using absolute paths in both the Python and Bash scripts to avoid trouble referencing paths. 
+The job of this script is to run the Python script. Be careful of using absolute paths in both the Python and Bash scripts to avoid trouble referencing paths. 
 
 ## Dependencies
 
-The modules `shutils`, `subprocess` and `datetime` are part of the standard Python library.  
+The modules `shutil`, `subprocess` and `datetime` are part of the standard Python library.  
 
 ## Cron job
 
